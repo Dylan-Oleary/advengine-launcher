@@ -1,0 +1,161 @@
+{
+    "title": "28",
+    "meta": {
+        "releaseDate": "January 9th, 2020",
+        "tagline": "The Game"
+    },
+    "levels": {
+        "1": {
+            "id": "1",
+            "rooms": {
+                "1": {
+                    "id": "1",
+                    "name": "Room of Death",
+                    "message": "In the first room on level 1",
+                    "choices": [
+                        {
+                            "message": "Go to level 2, room 1",
+                            "exits": {
+                                "level": "2",
+                                "room": "1"
+                            }
+                        },
+                        {
+                            "message": "Go to level 2, room 2",
+                            "exits": {
+                                "level": "2",
+                                "room": "2"
+                            }
+                        },
+                        {
+                            "message": "Go to level 2, room 2",
+                            "exits": {
+                                "level": "2",
+                                "room": "2"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "2": {
+            "id": "2",
+            "rooms": {
+                "1": {
+                    "id": "1",
+                    "message": "In the first room on level 2",
+                    "choices": [
+                        {
+                            "message": "Go to level 3, room 1",
+                            "exits": {
+                                "level": "3",
+                                "room": "1"
+                            }
+                        },
+                        {
+                            "message": "Go to level 3, room 2",
+                            "exits": {
+                                "level": "3",
+                                "room": "2"
+                            }
+                        }
+                    ]
+                },
+                "2": {
+                    "id": "2",
+                    "message": "In the second rooom on level 2",
+                    "choices": [
+                        {
+                            "message": "Go to level 3, room 3",
+                            "exits": {
+                                "level": "3",
+                                "room": "3"
+                            }
+                        },
+                        {
+                            "message": "Go to level 3, room 4",
+                            "exits": {
+                                "level": "3",
+                                "room": "4"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "3": {
+            "id": "3",
+            "rooms": {
+                "1": {
+                    "id": "1",
+                    "message": "Level 3 Room 1",
+                    "choices": [
+                        {
+                            "message": "Go to level 1, room 1",
+                            "exits": {
+                                "level": "1",
+                                "room": "1"
+                            }
+                        },
+                        {
+                            "message": "Go for the win",
+                            "exits": {
+                                "endCondition": "win"
+                            }
+                        }
+                    ]
+                },
+                "2": {
+                    "id": "2",
+                    "message": "Level 3 Room 2",
+                    "choices": [
+                        {
+                            "message": "Go to level 2, room 2",
+                            "exits": {
+                                "level": "2",
+                                "room": "2"
+                            }
+                        },
+                        {
+                            "message": "Go for the loss",
+                            "exits": {
+                                "endCondition": "lose"
+                            }
+                        }
+                    ]
+                },
+                "3": {
+                    "id": "3",
+                    "message": "Level 3 Room 3",
+                    "choices": [
+                        {
+                            "message": "Go for the win",
+                            "exits": {
+                                "endCondition": "win"
+                            }
+                        }
+                    ]
+                },
+                "4": {
+                    "id": "4",
+                    "message": "Level 3 Room 4",
+                    "choices": [
+                        {
+                            "message": "Go to level 1, room 1",
+                            "exits": {
+                                "level": "1",
+                                "room": "1"
+                            }
+                        },
+                        {
+                            "message": "Go for the loss",
+                            "exits": {
+                                "endCondition": "lose"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
