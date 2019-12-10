@@ -4,13 +4,17 @@
   "description": "A choose-your-own adventure game launcher",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\"",
     "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dylan O'Leary <dylaneamusic@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.1"
   }
 }
