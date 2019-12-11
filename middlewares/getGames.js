@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const checkGame = require("../libs/checkGame");
 
 const getGames = (req, res, next) => {
     fs.readdir(path.join(__dirname, "../games"), (error, fileNames) => {
@@ -11,12 +12,13 @@ const getGames = (req, res, next) => {
                     if(error){
                         reject(error);
                     } else {
-                        //Iterate over keys and fill in all blanks
                         resolve(JSON.parse(contents));
                     }
                 })
             });
-        })).then(gameLibrary => {
+        })).then(games => {
+            const gameLibrary = games.filter(game => checkGame(game));
+
             req.gameLibrary = gameLibrary;
 
             return next();

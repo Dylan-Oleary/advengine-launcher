@@ -1,4 +1,5 @@
 import React, { createContext } from "react";
+import { runInNewContext } from "vm";
 
 export const GameContext = createContext();
 
@@ -8,6 +9,7 @@ export const GameContextProvider = ({
     setGameState,
     cartridge
 }) => {
+    const { levels } = cartridge;
 
     const startGame = () => {
         setGameState({
@@ -19,8 +21,10 @@ export const GameContextProvider = ({
                 room: true
             },
             isPlaying: true,
-            currentLevel: cartridge["levels"]["1"],
-            currentRoom: cartridge["levels"]["1"]["rooms"]["1"],
+            playerLocation: {
+                level: 0,
+                room: levels[0]["rooms"][0]
+            }
         });
     };
 
@@ -28,8 +32,10 @@ export const GameContextProvider = ({
         setGameState({
             ...gameState,
             isPlaying: false,
-            currentLevel: null,
-            currentRoom: null,
+            playerLocation: {
+                level: null,
+                room: null
+            },
             screenDisplay: {
                 start: false,
                 gameOver: true,
@@ -43,8 +49,10 @@ export const GameContextProvider = ({
         setGameState({
             ...gameState,
             isPlaying: false,
-            currentLevel: null,
-            currentRoom: null,
+            playerLocation: {
+                level: null,
+                room: null
+            },
             screenDisplay: {
                 start: false,
                 gameOver: false,
@@ -58,8 +66,10 @@ export const GameContextProvider = ({
         setGameState({
             ...gameState,
             isPlaying: false,
-            currentLevel: null,
-            currentRoom: null,
+            playerLocation: {
+                level: null,
+                room: null
+            },
             screenDisplay: {
                 start: true,
                 gameOver: false,
@@ -69,11 +79,13 @@ export const GameContextProvider = ({
         });
     };
 
-    const handlePlayerChoice = (newLevel, newRoom) => {
+    const movePlayer = (newLevel, newRoom) => {
         setGameState({
             ...gameState,
-            currentLevel: cartridge["levels"][newLevel],
-            currentRoom: cartridge["levels"][newLevel]["rooms"][newRoom],
+            playerLocation: {
+                level: newLevel,
+                room: levels[newLevel]["rooms"][newRoom]
+            }
         });
     };
 
@@ -84,7 +96,7 @@ export const GameContextProvider = ({
                 startGame,
                 loseGame,
                 winGame,
-                handlePlayerChoice,
+                movePlayer,
                 goToStartMenu
             }}
         >

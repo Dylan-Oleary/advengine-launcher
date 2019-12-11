@@ -17,9 +17,10 @@ const Game = ({ cartridge }) => {
         isPlaying: false,
         isWon: false,
         isLost: false,
-        currentLevel: null,
-        currentRoom: null,
+        playerLocation: null
     });
+
+    console.log(cartridge)
 
     const renderScreen = () => {
         const { isPlaying, screenDisplay } = gameState;

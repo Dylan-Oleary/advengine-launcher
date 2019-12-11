@@ -4,158 +4,251 @@
         "releaseDate": "January 9th, 2020",
         "tagline": "The Game"
     },
-    "levels": {
-        "1": {
-            "id": "1",
-            "rooms": {
-                "1": {
-                    "id": "1",
-                    "name": "Room of Death",
-                    "message": "In the first room on level 1",
+    "levels": [
+        {
+            "id": 1,
+            "rooms": [
+                {
+                    "scenario": "Level 1 -- Room 1",
                     "choices": [
                         {
-                            "message": "Go to level 2, room 1",
-                            "exits": {
-                                "level": "2",
-                                "room": "1"
-                            }
+                            "id": 0,
+                            "message": "Level 2, Room 1",
+                            "effect": null
                         },
                         {
-                            "message": "Go to level 2, room 2",
-                            "exits": {
-                                "level": "2",
-                                "room": "2"
-                            }
-                        },
-                        {
-                            "message": "Go to level 2, room 2",
-                            "exits": {
-                                "level": "2",
-                                "room": "2"
-                            }
+                            "id": 1,
+                            "message": "Level 2, Room 2",
+                            "effect": null
                         }
                     ]
                 }
-            }
+            ]
         },
-        "2": {
-            "id": "2",
-            "rooms": {
-                "1": {
-                    "id": "1",
-                    "message": "In the first room on level 2",
+        {
+            "id": 2,
+            "rooms": [
+                {
+                    "scenario": "Level 2 -- Room 1",
                     "choices": [
                         {
-                            "message": "Go to level 3, room 1",
-                            "exits": {
-                                "level": "3",
-                                "room": "1"
-                            }
+                            "id": 0,
+                            "message": "Level 3, Room 1",
+                            "effect": null
                         },
                         {
-                            "message": "Go to level 3, room 2",
-                            "exits": {
-                                "level": "3",
-                                "room": "2"
-                            }
+                            "id": 1,
+                            "message": "Level 3, Room 2",
+                            "effect": null
                         }
                     ]
                 },
-                "2": {
-                    "id": "2",
-                    "message": "In the second rooom on level 2",
+                {
+                    "scenario": "Level 2 -- Room 2",
                     "choices": [
                         {
-                            "message": "Go to level 3, room 3",
-                            "exits": {
-                                "level": "3",
-                                "room": "3"
-                            }
+                            "id": 2,
+                            "message": "Level 3, Room 3",
+                            "effect": null
                         },
                         {
-                            "message": "Go to level 3, room 4",
-                            "exits": {
-                                "level": "3",
-                                "room": "4"
-                            }
+                            "id": 3,
+                            "message": "Level 3, Room 4",
+                            "effect": null
                         }
                     ]
                 }
-            }
+            ]
         },
-        "3": {
-            "id": "3",
-            "rooms": {
-                "1": {
-                    "id": "1",
-                    "message": "Level 3 Room 1",
+        {
+            "id": 3,
+            "rooms": [
+                {
+                    "scenario": "Level 3 -- Room 1",
                     "choices": [
                         {
-                            "message": "Go to level 1, room 1",
-                            "exits": {
-                                "level": "1",
-                                "room": "1"
-                            }
+                            "id": 0,
+                            "message": "Level 4, Room 1",
+                            "effect": null
                         },
                         {
-                            "message": "Go for the win",
-                            "exits": {
-                                "endCondition": "win"
-                            }
+                            "id": 1,
+                            "message": "Level 4, Room 2",
+                            "effect": null
                         }
                     ]
                 },
-                "2": {
-                    "id": "2",
-                    "message": "Level 3 Room 2",
+                {
+                    "scenario": "Level 3 -- Room 2",
                     "choices": [
                         {
-                            "message": "Go to level 2, room 2",
-                            "exits": {
-                                "level": "2",
-                                "room": "2"
-                            }
+                            "id": 2,
+                            "message": "Level 4, Room 3",
+                            "effect": null
                         },
                         {
-                            "message": "Go for the loss",
-                            "exits": {
-                                "endCondition": "lose"
-                            }
+                            "id": 3,
+                            "message": "Level 4, Room 4",
+                            "effect": null
                         }
                     ]
                 },
-                "3": {
-                    "id": "3",
-                    "message": "Level 3 Room 3",
+                {
+                    "scenario": "Level 3 -- Room 3",
                     "choices": [
                         {
-                            "message": "Go for the win",
-                            "exits": {
-                                "endCondition": "win"
-                            }
+                            "id": 4,
+                            "message": "Level 4, Room 5",
+                            "effect": null
+                        },
+                        {
+                            "id": 5,
+                            "message": "Level 4, Room 6",
+                            "effect": null
                         }
                     ]
                 },
-                "4": {
-                    "id": "4",
-                    "message": "Level 3 Room 4",
+                {
+                    "scenario": "Level 3 -- Room 4",
                     "choices": [
                         {
-                            "message": "Go to level 1, room 1",
-                            "exits": {
-                                "level": "1",
-                                "room": "1"
-                            }
+                            "id": 6,
+                            "message": "Level 4, Room 7",
+                            "effect": null
                         },
                         {
-                            "message": "Go for the loss",
-                            "exits": {
-                                "endCondition": "lose"
-                            }
+                            "id": 7,
+                            "message": "Level 4, Room 8",
+                            "effect": null
                         }
                     ]
                 }
-            }
+            ]
+        }, 
+        {
+            "id": 4,
+            "rooms": [
+                {
+                    "scenario": "Level 4 -- Room 1",
+                    "choices": [
+                        {
+                            "id": 0,
+                            "message": "Lose",
+                            "effect": "lose"
+                        },
+                        {
+                            "id": 1,
+                            "message": "Lose",
+                            "effect": "lose"
+                        }
+                    ]
+                },
+                {
+                    "scenario": "Level 4 -- Room 2",
+                    "choices": [
+                        {
+                            "id": 2,
+                            "message": "win",
+                            "effect": "win"
+                        },
+                        {
+                            "id": 3,
+                            "message": "win",
+                            "effect": "win"
+                        }
+                    ]
+                },
+                {
+                    "scenario": "Level 4 -- Room 3",
+                    "choices": [
+                        {
+                            "id": 4,
+                            "message": "Lose",
+                            "effect": "lose"
+                        },
+                        {
+                            "id": 5,
+                            "message": "Lose",
+                            "effect": "lose"
+                        }
+                    ]
+                },
+                {
+                    "scenario": "Level 4 -- Room 4",
+                    "choices": [
+                        {
+                            "id": 6,
+                            "message": "win",
+                            "effect": "win"
+                        },
+                        {
+                            "id": 7,
+                            "message": "win",
+                            "effect": "win"
+                        }
+                    ]
+                },
+                {
+                    "scenario": "Level 4 -- Room 5",
+                    "choices": [
+                        {
+                            "id": 8,
+                            "message": "Lose",
+                            "effect": "lose"
+                        },
+                        {
+                            "id": 9,
+                            "message": "Lose",
+                            "effect": "lose"
+                        }
+                    ]
+                },
+                {
+                    "scenario": "Level 4 -- Room 6",
+                    "choices": [
+                        {
+                            "id": 10,
+                            "message": "win",
+                            "effect": "win"
+                        },
+                        {
+                            "id": 11,
+                            "message": "win",
+                            "effect": "win"
+                        }
+                    ]
+                },
+                {
+                    "scenario": "Level 4 -- Room 7",
+                    "choices": [
+                        {
+                            "id": 12,
+                            "message": "Lose",
+                            "effect": "lose"
+                        },
+                        {
+                            "id": 13,
+                            "message": "Lose",
+                            "effect": "lose"
+                        }
+                    ]
+                },
+                {
+                    "scenario": "Level 4 -- Room 8",
+                    "choices": [
+                        {
+                            "id": 14,
+                            "message": "win",
+                            "effect": "win"
+                        },
+                        {
+                            "id": 15,
+                            "message": "win",
+                            "effect": "win"
+                        }
+                    ]
+                }
+            ]
         }
-    }
+    ]
 }

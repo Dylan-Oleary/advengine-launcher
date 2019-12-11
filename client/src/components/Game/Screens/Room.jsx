@@ -4,8 +4,8 @@ import { GameContext } from "../../../contexts";
 import ChoiceGroup from "../ChoiceGroup";
 
 const Room = () => {
-    const { gameState, handlePlayerChoice, loseGame, winGame } = useContext(GameContext);
-    const { currentLevel, currentRoom } = gameState;
+    const { gameState, movePlayer, loseGame, winGame } = useContext(GameContext);
+    const { playerLocation } = gameState;
     const firstChoice = useRef();
 
     useEffect(() => {
@@ -15,19 +15,19 @@ const Room = () => {
     const renderChoice = (choice, index) => {
         let clickHandler;
 
-        if(choice.exits.endCondition){
-            if(choice.exits.endCondition === "win"){
+        if(choice.effect === null){
+            clickHandler = () => movePlayer((playerLocation.level + 1), choice.id);
+        } else {
+            if(choice.effect === "win"){
                 clickHandler = () => winGame();
-            } else if(choice.exits.endCondition === "lose"){
+            } else {
                 clickHandler = () => loseGame();
             }
-        } else {
-            clickHandler = () => handlePlayerChoice(choice.exits.level, choice.exits.room);
         }
 
         return (
             <button
-                key={`${currentLevel.id}-${currentRoom.id}-${index}`}
+                key={index}
                 ref={index === 0 ? firstChoice : null}
                 onClick={clickHandler}
             >
@@ -38,11 +38,11 @@ const Room = () => {
 
     return (
         <div id="Room">
-            <h2 className="room-message">{currentRoom.message}</h2>
+            <h2 className="room-message">{playerLocation.room.scenario}</h2>
             <ChoiceGroup
                 className="room-choice-group"
             >
-                {currentRoom.choices && currentRoom.choices.map((choice, index) => renderChoice(choice, index))}
+                {playerLocation.room.choices && playerLocation.room.choices.map((choice, index) => renderChoice(choice, index))}
             </ChoiceGroup>
         </div>
     );

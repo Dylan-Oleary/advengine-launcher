@@ -1,0 +1,67 @@
+{
+    "title": "Error Game",
+    "meta": {
+        "releaseDate": "January 9th, 2020",
+        "tagline": "The Game"
+    },
+    "levels": [
+        {
+            "id": "1",
+            "rooms": [
+                {
+                    "choices": [
+                        {
+                            "message": "Level 2, Room 1",
+                            "effect": null
+                        },
+                        {
+                            "message": "Level 2, Room 2",
+                            "effect": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "rooms": [
+                {
+                    "choices": [
+                        {
+                            "message": "Level 3, Room 1",
+                            "effect": null
+                        },
+                        {
+                            "message": "Level 3, Room 2",
+                            "effect": null
+                        }
+                    ]
+                },
+                {
+                    "choices": [
+                        {
+                            "message": "Level 3, Room 3",
+                            "effect": null
+                        },
+                        {
+                            "message": "Level 3, Room 4",
+                            "effect": null
+                        }
+                    ]
+                },
+                {
+                    "choices": [
+                        {
+                            "message": "Level 3, Room 1",
+                            "effect": null
+                        },
+                        {
+                            "message": "Level 3, Room 2",
+                            "effect": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
