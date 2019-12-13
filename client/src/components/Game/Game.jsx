@@ -5,7 +5,6 @@ import { Error, GameOver, GameWon, Room, StartMenu } from "./Screens";
 
 const Game = ({ cartridge }) => {
     const { title, meta } = cartridge;
-    const { theme } = useContext(ThemeContext);
     const [ gameState, setGameState ] = useState({
         title,
         meta,
@@ -19,8 +18,6 @@ const Game = ({ cartridge }) => {
         isLost: false,
         playerLocation: null
     });
-
-    console.log(cartridge)
 
     const renderScreen = () => {
         const { isPlaying, screenDisplay } = gameState;
@@ -46,7 +43,9 @@ const Game = ({ cartridge }) => {
             setGameState={setGameState}
             cartridge={cartridge}
         >
-            { renderScreen() }
+            <div className={`${cartridge.meta.theme} game-wrapper`}>
+                { renderScreen() }
+            </div>
         </GameContextProvider>
     );
 };

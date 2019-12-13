@@ -21,7 +21,7 @@ const Launcher = () => {
 
     return (
         <div id="Launcher">
-            {Object.entries(selectedGame).length > 0 
+            {Object.entries(selectedGame).length > 0
                 ? (
                     <Game 
                         cartridge={selectedGame}

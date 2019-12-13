@@ -12,7 +12,9 @@
   "author": "Dylan O'Leary <dylaneamusic@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "node-sass": "^4.13.0"
   },
   "devDependencies": {
     "concurrently": "^5.0.1"

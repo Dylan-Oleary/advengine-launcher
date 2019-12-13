@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useRef } from "react";
 
 import { GameContext } from "../../../contexts";
 import ChoiceGroup from "../ChoiceGroup";
+import Choice from "../Choice";
 
 const Room = () => {
     const { gameState, movePlayer, loseGame, winGame } = useContext(GameContext);
     const { playerLocation } = gameState;
-    const firstChoice = useRef();
+    const firstChoice = useRef(null);
 
     useEffect(() => {
         firstChoice.current.focus();
@@ -26,13 +27,12 @@ const Room = () => {
         }
 
         return (
-            <button
+            <Choice
                 key={index}
-                ref={index === 0 ? firstChoice : null}
                 onClick={clickHandler}
-            >
-                {choice.message}
-            </button>
+                message={choice.message}
+                choiceRef={index === 0 ? firstChoice : null}
+            />
         );
     };
 

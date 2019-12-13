@@ -19,9 +19,7 @@ const StartMenu = () => {
             <h1 className="title main">{title}</h1>
             <div className="title tagline">{tagline}</div>
             <div className="d-flex justify-content-center">
-                <ChoiceGroup>
-                    <button onClick={startGame}>Start</button>
-                </ChoiceGroup>
+                <button onClick={startGame}>Start</button>
             </div>
         </div>
     );

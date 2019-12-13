@@ -1,0 +1,59 @@
+.terminal {
+    min-height: 100vh;
+    background-color: #000;
+    background-image: radial-gradient(
+        rgba(0, 75, 0, 0.75), black 120%
+      );
+    color: #4AF626;
+    font-family: Inconsolata, monospace;
+    &.game-wrapper {
+        ::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: repeating-linear-gradient(
+              0deg,
+              rgba(black, 0.15),
+              rgba(black, 0.15) 1px,
+              transparent 1px,
+              transparent 2px
+            );
+        }
+    }
+
+    .title {
+        &.main {
+            letter-spacing: -3rem;
+        }
+    }
+
+    #Game {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .room-choice-group, .game-over-choice-group, .game-won-choice-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        button {
+            margin: 1rem auto;
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        color: #4AF626;
+        font-size: 1.75rem;
+        outline: 0;
+        &:focus {
+            background: #4AF626;
+            outline: 0;
+            color: #000;
+        }
+    }
+}

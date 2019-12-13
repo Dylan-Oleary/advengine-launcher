@@ -1,0 +1,48 @@
+@import "./themes/terminal.scss";
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+}
+
+body, #root, #Launcher, #Game {
+    min-height: 100vh;
+}
+
+#GameOver, #GameWon, #StartMenu, #Room {
+    padding: 2rem;
+}
+
+#Room, #GameOver, #GameWon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    &.main {
+        font-size: 25rem;
+        margin: 0.75rem 0;
+    }
+    &.tagline {
+        font-size: 5.5rem;
+        margin-top: -5.5rem;
+    }
+    &.landing {
+        font-size: 8.5rem;
+    }
+}
+
+.room-message {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+button {
+    font-size: 2rem;
+    z-index: 999999;
+}

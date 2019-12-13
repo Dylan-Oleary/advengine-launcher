@@ -21,20 +21,16 @@
             if(rooms === undefined || !Array.isArray(rooms)) {
                 errors.push(`Level ${id} has no rooms or the rooms are not an array`);
             } else {
-                if(rooms.length !== expectedRooms) errors.push(`Level ${id} should have ${expectedRooms} room(s) but only has ${rooms.length}`);
-
                 rooms.forEach((room, index) => {
                     const { choices } = room;
 
                     if(choices === undefined || !Array.isArray(choices)) {
                         errors.push(`Level ${id} - Room ${index + 1} has no choices or the choices are not array`);
                     } else {
-                        if(choices.length !== expectedChoices) errors.push(`Level ${id} - Room ${index + 1} should have 2 rooms but has ${choices.length}`);
+                        if(choices.length !== expectedChoices) errors.push(`Level ${id} - Room ${index + 1} should have 2 choices but has ${choices.length}`);
                     }
                 })
             }
-
-            expectedRooms = expectedRooms * 2;
         });
     }
 
