@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import "../fonts/8-Bit.ttf";
+import AdvengineLogo from "../images/advengine.png";
+
 import Game from "./Game";
+import GameCase from "./GameCase";
+
 
 const Launcher = () => {
     const [gameLibrary, setGameLibrary] = useState([]);
@@ -28,8 +33,27 @@ const Launcher = () => {
                         closeGame={closeGame}
                     />
                 ) : (
-                    <div className="game-selection-row">
-                        {gameLibrary.map(game => <button onClick={() => setSelectedGame(game)}>{game.title}</button>)}
+                    <div className="choose-game">
+                        <img
+                            className="logo"
+                            src={AdvengineLogo}
+                            alt=""
+                        />
+                        <div className="game-selection">
+                            <h2 className="header">GAMES</h2>
+                            <div className="games">
+                                {gameLibrary.map(game => (
+                                    <GameCase
+                                        startGame={setSelectedGame}
+                                        game={game}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className="footer">
+                            <p>&copy; 2020 WALKAWAY WILD INC.</p>
+                            <p>HAPPY BIRTHDAY MOTHER F#@KER!</p>
+                        </div>
                     </div>
                 )
             }

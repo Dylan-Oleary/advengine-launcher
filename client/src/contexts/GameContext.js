@@ -1,5 +1,4 @@
 import React, { createContext } from "react";
-import { runInNewContext } from "vm";
 
 export const GameContext = createContext();
 
@@ -21,10 +20,7 @@ export const GameContextProvider = ({
                 room: true
             },
             isPlaying: true,
-            playerLocation: {
-                level: 0,
-                room: levels[0]["rooms"][0]
-            }
+            playerLocation: levels[0]["rooms"][0]
         });
     };
 
@@ -32,10 +28,7 @@ export const GameContextProvider = ({
         setGameState({
             ...gameState,
             isPlaying: false,
-            playerLocation: {
-                level: null,
-                room: null
-            },
+            playerLocation: null,
             screenDisplay: {
                 start: false,
                 gameOver: true,
@@ -49,10 +42,7 @@ export const GameContextProvider = ({
         setGameState({
             ...gameState,
             isPlaying: false,
-            playerLocation: {
-                level: null,
-                room: null
-            },
+            playerLocation: null,
             screenDisplay: {
                 start: false,
                 gameOver: false,
@@ -66,10 +56,7 @@ export const GameContextProvider = ({
         setGameState({
             ...gameState,
             isPlaying: false,
-            playerLocation: {
-                level: null,
-                room: null
-            },
+            playerLocation: null,
             screenDisplay: {
                 start: true,
                 gameOver: false,
@@ -80,12 +67,13 @@ export const GameContextProvider = ({
     };
 
     const movePlayer = (newLevel, newRoom) => {
+        console.log(newLevel)
+        console.log(newRoom)
+
+        console.log(levels[newLevel].rooms[0])
         setGameState({
             ...gameState,
-            playerLocation: {
-                level: newLevel,
-                room: levels[newLevel]["rooms"][newRoom]
-            }
+            playerLocation: levels[newLevel]["rooms"][newRoom]
         });
     };
 
@@ -102,5 +90,5 @@ export const GameContextProvider = ({
         >
             {children}
         </GameContext.Provider>
-    )
+    );
 };

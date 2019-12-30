@@ -12,7 +12,12 @@ const GameWon = () => {
             <ChoiceGroup
                 className="game-won-choice-group"
             >
-                <button onClick={goToStartMenu} >Play Again</button>
+                <div
+                    className="choice"
+                    onClick={goToStartMenu}
+                >
+                    Play Again
+                </div>
             </ChoiceGroup>
         </div>
     );

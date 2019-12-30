@@ -1,14 +1,13 @@
 import React from "react";
 
-const Choice = ({ onClick, message, choiceRef }) => {
+const Choice = ({ onClick, message }) => {
     return (
-        <button
+        <div
             className="choice"
             onClick={onClick}
-            ref={choiceRef}
         >
             {message}
-        </button>
+        </div>
     );
 };
 

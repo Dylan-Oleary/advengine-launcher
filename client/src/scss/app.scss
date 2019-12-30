@@ -1,5 +1,10 @@
 @import "./themes/terminal.scss";
 
+@font-face {
+    font-family: "8-Bit";
+    src: local("8-Bit"), url(../fonts/8-Bit.ttf) format("truetype");
+}
+
 html {
     min-height: 100vh;
 }
@@ -8,7 +13,7 @@ body {
     margin: 0;
 }
 
-body, #root, #Launcher, #Game {
+body, #root, #Launcher, #Game, .choose-game {
     min-height: 100vh;
 }
 
@@ -20,6 +25,12 @@ body, #root, #Launcher, #Game {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#Launcher {
+    background-color: #100E17;
+    color: #fff;
+    font-family: "8-Bit";
 }
 
 .title {
@@ -42,7 +53,68 @@ body, #root, #Launcher, #Game {
     text-align: center;
 }
 
-button {
+.choice {
     font-size: 2rem;
     z-index: 999999;
+    cursor: pointer;
+}
+
+.choose-game {
+    max-width: 900px;
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .logo {
+        min-height: 200px;;
+    }
+    .game-selection {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        padding: 1rem;
+        .games {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    .footer {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #F706CF;
+        text-shadow: 0px 1px 2px rgba(14,127,205,1);
+        p {
+            margin-bottom: 0;
+            line-height: 2.5rem;
+        }
+    }
+}
+
+.game-case {
+    display:flex;
+    flex-direction: column;
+    color: #0E7FCD;
+    text-align: center;
+    .choice {
+        margin: 0 auto;
+        width: 50%;
+        &.hover {
+            color: #fff;
+        }
+    }
+    img {
+        height: 150px;
+        width: 150px;
+        border: solid 1px #2E2157;
+        box-shadow: 0px 5px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        &.hover {
+            border: solid 1px #FFF;
+        }
+    }
+}
+
+.header {
+    font-size: 3.5rem;
 }

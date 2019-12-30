@@ -12,7 +12,12 @@ const GameOver = () => {
             <ChoiceGroup
                 className="game-over-choice-group"
             >
-                <button onClick={goToStartMenu}>Play Again</button>
+                <div
+                    className="choice"
+                    onClick={goToStartMenu}
+                >
+                    Play Again
+                </div>
             </ChoiceGroup>
         </div>
     );
