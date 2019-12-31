@@ -40,7 +40,7 @@ const Launcher = () => {
                             alt=""
                         />
                         <div className="game-selection">
-                            <h2 className="header">GAMES</h2>
+                            <h2 className="header">CHOOSE YOUR ADVENTURE...</h2>
                             <div className="games">
                                 {gameLibrary.map(game => (
                                     <GameCase

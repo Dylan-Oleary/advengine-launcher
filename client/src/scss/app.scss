@@ -28,10 +28,22 @@ body, #root, #Launcher, #Game, .choose-game {
 }
 
 #Launcher {
-    // background-color: #100E17;
-    background-image: radial-gradient(circle, #150b28, #180f30, #1c1137, #21133f, #261447);
+    position: relative;
+    background: url("../images/subtle-dots.png");
     color: #fff;
     font-family: "8-Bit";
+
+    &:before {
+        content: "";
+        position: absolute;
+        top:0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-image: radial-gradient(circle, #150b28, #180f30, #1c1137, #21133f, #261447);
+        opacity: 1;
+        z-index: -100
+    }
 }
 
 .title {
@@ -73,18 +85,22 @@ body, #root, #Launcher, #Game, .choose-game {
         display: flex;
         flex-direction: column;
         flex: 1 0 auto;
-        padding: 1rem;
+        padding: 0rem 1rem;
         .games {
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2rem;
         }
     }
     .footer {
         text-align: center;
         font-size: 3rem;
         font-weight: 700;
-        color: #F706CF;
-        // text-shadow: 0px 1px 2px rgba(14,127,205,1);
+        // color: #F706CF;
+        color: #2DE2E6;
+        text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
         p {
             margin-bottom: 0;
             line-height: 2.5rem;
@@ -95,13 +111,13 @@ body, #root, #Launcher, #Game, .choose-game {
 .game-case {
     display:flex;
     flex-direction: column;
-    color: #0E7FCD;
+    color: #FFF;
     text-align: center;
     .choice {
         margin: 0 auto;
         width: 50%;
         &.hover {
-            color: #fff;
+            color: #F706CF;
         }
     }
     img {
@@ -111,7 +127,7 @@ body, #root, #Launcher, #Game, .choose-game {
         box-shadow: 0px 5px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
         transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
         &.hover {
-            border: solid 1px #FFF;
+            border: solid 2px #F706CF;
         }
     }
 }
@@ -128,4 +144,6 @@ body, #root, #Launcher, #Game, .choose-game {
 
 .header {
     font-size: 3.5rem;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
 }
