@@ -28,7 +28,8 @@ body, #root, #Launcher, #Game, .choose-game {
 }
 
 #Launcher {
-    background-color: #100E17;
+    // background-color: #100E17;
+    background-image: radial-gradient(circle, #150b28, #180f30, #1c1137, #21133f, #261447);
     color: #fff;
     font-family: "8-Bit";
 }
@@ -83,7 +84,7 @@ body, #root, #Launcher, #Game, .choose-game {
         font-size: 3rem;
         font-weight: 700;
         color: #F706CF;
-        text-shadow: 0px 1px 2px rgba(14,127,205,1);
+        // text-shadow: 0px 1px 2px rgba(14,127,205,1);
         p {
             margin-bottom: 0;
             line-height: 2.5rem;
@@ -112,6 +113,16 @@ body, #root, #Launcher, #Game, .choose-game {
         &.hover {
             border: solid 1px #FFF;
         }
+    }
+}
+
+.game-wrapper {
+    .options {
+        padding: 1rem;
+        display: flex;
+        font-size: 1.25rem;
+        justify-content: flex-end;
+        cursor: pointer;
     }
 }
 

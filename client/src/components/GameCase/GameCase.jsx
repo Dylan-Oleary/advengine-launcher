@@ -4,8 +4,6 @@ const GameCase = ({ game, startGame }) => {
     const [ isHovering, setIsHovering ] = useState(false);
     const { cover } = game.meta;
 
-    console.log(isHovering)
-
     return (
         <div className="game-case">
             <img

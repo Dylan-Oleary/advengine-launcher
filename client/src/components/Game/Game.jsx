@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { GameContextProvider, ThemeContext} from "../../contexts";
 import { Error, GameOver, GameWon, Room, StartMenu } from "./Screens";
 
-const Game = ({ cartridge }) => {
+const Game = ({ cartridge, closeGame }) => {
     const { title, meta } = cartridge;
     const [ gameState, setGameState ] = useState({
         title,
@@ -18,6 +18,18 @@ const Game = ({ cartridge }) => {
         isLost: false,
         playerLocation: null
     });
+
+    const handleKeyPress = keyPress => {
+        if(keyPress.keyCode === 88){
+            closeGame();
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("keydown", handleKeyPress);
+
+        return () => document.removeEventListener("keydown", handleKeyPress);
+    },[]);
 
     const renderScreen = () => {
         const { isPlaying, screenDisplay } = gameState;
@@ -44,6 +56,9 @@ const Game = ({ cartridge }) => {
             cartridge={cartridge}
         >
             <div className={`${cartridge.meta.theme} game-wrapper`}>
+                <div className="options">
+                    <p onClick={closeGame}>EXIT TO ADVENGINE [X]</p>
+                </div>
                 { renderScreen() }
             </div>
         </GameContextProvider>
