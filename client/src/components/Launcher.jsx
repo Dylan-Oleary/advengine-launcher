@@ -4,6 +4,7 @@ import axios from "axios";
 import "../fonts/8-Bit.ttf";
 import AdvengineLogo from "../images/advengine.png";
 
+import AudioPlayer from "./AudioPlayer";
 import Game from "./Game";
 import GameCase from "./GameCase";
 
@@ -26,6 +27,7 @@ const Launcher = () => {
 
     return (
         <div id="Launcher">
+            <AudioPlayer />
             {Object.entries(selectedGame).length > 0
                 ? (
                     <Game 
