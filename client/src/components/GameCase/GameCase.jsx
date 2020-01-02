@@ -17,7 +17,7 @@ const GameCase = ({ game, startGame }) => {
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
             >
-                PLAY
+                {game.title.toUpperCase()}
             </div>
         </div>
     );

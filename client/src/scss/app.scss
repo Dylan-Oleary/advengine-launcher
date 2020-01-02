@@ -79,32 +79,72 @@ body, #root, #Launcher, #Game, .choose-game {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 767px) {
+        padding: 1rem;
+    }
     .logo {
-        min-height: 200px;;
+        @media screen and (max-width: 425px){
+            min-height: 140px;
+        }
+        @media screen and (min-width: 426px) and (max-width: 767px) {
+            min-height: calc(100vw * 0.30);
+            max-height: 170px;
+        }
+        @media screen and (min-width: 768px){
+            min-height: 230px;
+        }
+    }
+    .header {
+        text-align: center;
+        text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
+        @media screen and (max-width: 425px){
+            font-size: 2rem;
+        }
+        @media screen and (min-width: 426px) and (max-width: 767px) {
+            font-size: 8.5vw;
+        }
+        @media screen and (min-width: 768px){
+            font-size: 4rem
+        }
     }
     .game-selection {
         display: flex;
         flex-direction: column;
         flex: 1 0 auto;
         padding: 0rem 1rem;
+        margin: 0.5rem auto;
         .games {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            padding-top: 2rem;
+            align-items: flex-start;
         }
     }
     .footer {
         text-align: center;
         font-size: 3rem;
         font-weight: 700;
-        // color: #F706CF;
         color: #2DE2E6;
         text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
         p {
             margin-bottom: 0;
             line-height: 2.5rem;
+        }
+
+
+        @media screen and (max-width: 425px){
+            font-size: 1.5rem;
+            p {
+                line-height: 1.5rem;
+            }
+        }
+
+        @media screen and (min-width: 426px) and(max-width: 767px) {
+            font-size: 2.25rem;
+            p {
+                line-height: 2rem;
+            }
         }
     }
 }
@@ -113,22 +153,39 @@ body, #root, #Launcher, #Game, .choose-game {
     display:flex;
     flex-direction: column;
     color: #FFF;
-    text-align: center;
+    width: 250px;
+    margin: 0.5rem;
+    overflow: hidden;
     .choice {
-        margin: 0 auto;
-        width: 50%;
+        text-align: center;
+        font-size: 1.75rem;
+        line-height: 2rem;
+        margin: 0.5rem auto;
+        width: 225px;
+        word-wrap: break-word;
         &.hover {
             color: #F706CF;
         }
     }
     img {
-        height: 150px;
-        width: 150px;
+        margin: 0 auto;
+        height: 300px;
+        width: 225px;
         border: solid 1px #2E2157;
         box-shadow: 0px 5px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
         transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
         &.hover {
             border: solid 2px #F706CF;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        margin: 0.5rem auto;
+        .choice {
+            font-size: 1.5rem;
+        }
+        img {
+            width: 200px;
+            height: 266px;
         }
     }
 }
@@ -141,10 +198,4 @@ body, #root, #Launcher, #Game, .choose-game {
         justify-content: flex-end;
         cursor: pointer;
     }
-}
-
-.header {
-    font-size: 3.5rem;
-    text-align: center;
-    text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
 }

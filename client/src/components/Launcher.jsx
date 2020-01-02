@@ -27,7 +27,6 @@ const Launcher = () => {
 
     return (
         <div id="Launcher">
-            <AudioPlayer />
             {Object.entries(selectedGame).length > 0
                 ? (
                     <Game 
@@ -36,6 +35,7 @@ const Launcher = () => {
                     />
                 ) : (
                     <div className="choose-game">
+                        <AudioPlayer />
                         <img
                             className="logo"
                             src={AdvengineLogo}
