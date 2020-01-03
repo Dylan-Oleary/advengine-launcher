@@ -20,11 +20,12 @@ export const GameContextProvider = ({
                 room: true
             },
             isPlaying: true,
-            playerLocation: levels[0]["rooms"][0]
+            playerLocation: levels[0]["rooms"][0],
+            playerMessage: ""
         });
     };
 
-    const loseGame = () => {
+    const loseGame = playerMessage => {
         setGameState({
             ...gameState,
             isPlaying: false,
@@ -35,10 +36,11 @@ export const GameContextProvider = ({
                 gameWon: false,
                 room: false
             },
+            playerMessage: playerMessage
         });
     };
 
-    const winGame = () => {
+    const winGame = playerMessage => {
         setGameState({
             ...gameState,
             isPlaying: false,
@@ -49,6 +51,7 @@ export const GameContextProvider = ({
                 gameWon: true,
                 room: false
             },
+            playerMessage: playerMessage
         });
     }
 
@@ -63,14 +66,11 @@ export const GameContextProvider = ({
                 gameWon: false,
                 room: false
             },
+            playerMessage: ""
         });
     };
 
     const movePlayer = (newLevel, newRoom) => {
-        console.log(newLevel)
-        console.log(newRoom)
-
-        console.log(levels[newLevel].rooms[0])
         setGameState({
             ...gameState,
             playerLocation: levels[newLevel]["rooms"][newRoom]

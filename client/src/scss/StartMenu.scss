@@ -1,0 +1,73 @@
+#StartMenu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-height: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 426px) and (max-width: 767px) {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .cover-wrapper {
+        margin: 0 auto;
+        width: 450px;
+        img {
+            width: 100%;
+            height: calc(width * 1.33);
+        }
+
+        @media screen and (max-width: 425px){
+            max-width: 300px;
+        }
+
+        @media screen and (min-width: 426px) and (max-width: 767px) {
+            max-width: 340px;
+        }
+    }
+
+    .title {
+        font-size: 4.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0 2rem;
+
+        @media screen and (max-width: 425px){
+            font-size: 3.25rem;
+        }
+
+        @media screen and (min-width: 426px) and (max-width: 767px) {
+            font-size: 3.5rem;
+        }
+    }
+
+    .summary {
+        font-size: 2rem;
+        padding: 0 2rem;
+        line-height: 2.25rem;
+        flex: 1;
+
+        @media screen and (max-width: 425px){
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+        }
+
+        @media screen and (min-width: 426px) and (max-width: 767px) {
+            font-size: 1.62rem;
+            line-height: 2rem;
+        }
+    }
+
+    .choice {
+        font-size: 3rem;
+
+        @media screen and (max-width: 425px){
+            font-size: 2rem;
+        }
+
+        @media screen and (min-width: 426px) and (max-width: 767px) {
+            font-size: 2.5rem;
+        }
+    }
+}

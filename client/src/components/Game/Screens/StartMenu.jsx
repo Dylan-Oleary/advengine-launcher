@@ -9,15 +9,19 @@ const StartMenu = () => {
         gameState: {
             title,
             meta: {
-                tagline
+                tagline,
+                cover
             }
         }
     } = useContext(GameContext);
 
     return (
         <div id="StartMenu">
-            <h1 className="title main">{title}</h1>
-            <div className="title tagline">{tagline}</div>
+            <div className="cover-wrapper">
+                <img src={require(`../../../images/${cover}`)} alt=""/>
+            </div>
+            <h1 className="title">{title.toUpperCase()}</h1>
+            <div className="summary">{tagline}</div>
             <div className="d-flex justify-content-center">
                 <div
                     className="choice"

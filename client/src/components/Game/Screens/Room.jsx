@@ -15,9 +15,9 @@ const Room = () => {
             clickHandler = () => movePlayer(choice.exit.level, choice.exit.room);
         } else {
             if(choice.exit.effect === "win"){
-                clickHandler = () => winGame();
+                clickHandler = () => winGame(choice.exit.effectDescription);
             } else {
-                clickHandler = () => loseGame();
+                clickHandler = () => loseGame(choice.exit.effectDescription);
             }
         }
 

@@ -4,11 +4,13 @@ import { GameContext } from "../../../contexts";
 import ChoiceGroup from "../ChoiceGroup";
 
 const GameWon = () => {
-    const { goToStartMenu } = useContext(GameContext);
+    const { goToStartMenu, gameState } = useContext(GameContext);
+    const { playerMessage } = gameState;
 
     return (
         <div id="GameWon">
             <h1 className="title landing">You Win!</h1>
+            <div className="summary landing">{playerMessage}</div>
             <ChoiceGroup
                 className="game-won-choice-group"
             >

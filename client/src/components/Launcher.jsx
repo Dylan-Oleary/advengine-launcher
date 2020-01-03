@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import "../fonts/8-Bit.ttf";
+import "../fonts/Serif-Gothic.otf";
 import AdvengineLogo from "../images/advengine.png";
 
 import AudioPlayer from "./AudioPlayer";

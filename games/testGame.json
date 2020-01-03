@@ -2,18 +2,18 @@
     "title": "Halloween",
     "meta": {
         "releaseDate": "January 9th, 2020",
-        "tagline": "The Game",
-        "theme": "terminal",
+        "tagline": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
+        "theme": "halloween",
         "cover": "HalloweenCover.png"
     },
     "levels": [
         {
             "rooms": [
                 {
-                    "scenario": "Level 1 -- Room 1 Bitch",
+                    "scenario": "You hear a knock at the door. You are all alone. What are you going to do about the knock?",
                     "choices": [
                         {
-                            "message": "Level 2, Room 1",
+                            "message": "Answer the door.",
                             "exit": {
                                 "effect": null,
                                 "level": 1,
@@ -21,7 +21,7 @@
                             }
                         },
                         {
-                            "message": "Level 2, Room 2",
+                            "message": "Wait to see if the knocking continues...",
                             "exit": {
                                 "effect": null,
                                 "level": 1,
@@ -41,6 +41,7 @@
                             "message": "Lose The Game",
                             "exit": {
                                 "effect": "lose",
+                                "effectDescription": "You got chopped up",
                                 "level": null,
                                 "room": null
                             }
@@ -49,6 +50,7 @@
                             "message": "win The Game",
                             "exit": {
                                 "effect": "win",
+                                "effectDescription": "You chopped up that guy",
                                 "level": null,
                                 "room": null
                             }
@@ -62,6 +64,7 @@
                             "message": "Lose The Game",
                             "exit": {
                                 "effect": "lose",
+                                "effectDescription": "You got chopped up",
                                 "level": null,
                                 "room": null
                             }
@@ -70,6 +73,7 @@
                             "message": "win The Game",
                             "exit": {
                                 "effect": "win",
+                                "effectDescription": "You chopped up that guy",
                                 "level": null,
                                 "room": null
                             }

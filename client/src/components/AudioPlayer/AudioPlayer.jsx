@@ -64,7 +64,7 @@ const AudioPlayer = () => {
     };
 
     const toggleMute = () => {
-        if(selectedSong.song._muted){
+        if(isMuted){
             selectedSong.song.mute(false);
             setIsMuted(false);
         } else {
