@@ -462,6 +462,7 @@
                         {
                             "message": "Back door",
                             "exit": {
+                                "effect": null,
                                 "level": 6,
                                 "room": 4
                             }
