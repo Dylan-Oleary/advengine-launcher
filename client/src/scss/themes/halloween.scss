@@ -28,8 +28,10 @@
     }
 
     .choice {
-        &:hover {
-            color: #EB6123;
+        @media screen and (min-width: 767px){
+            &:hover {
+                color: #EB6123;
+            }
         }
     }
 
