@@ -16,7 +16,7 @@
         width: 450px;
         img {
             width: 100%;
-            height: calc(width * 1.33);
+            height: auto;
         }
 
         @media screen and (max-width: 425px){
