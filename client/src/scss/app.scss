@@ -84,11 +84,11 @@ body, #root, #Launcher, #Game, .choose-game {
         font-size: 6.5rem;
 
         @media screen and (max-width: 425px) {
-            font-size: 5rem;
+            font-size: 3.5rem;
         }
 
         @media screen and (min-width: 426px) and (max-width: 767px){
-            font-size: 5.5rem;
+            font-size: 4rem;
         }
     }
 }
@@ -96,20 +96,20 @@ body, #root, #Launcher, #Game, .choose-game {
 .summary {
     text-align: center;
     &.landing {
-        font-size: 3.25rem;
+        font-size: 2.75rem;
         line-height: 4rem;
-        margin-bottom: 3rem;;
+        margin-bottom: 3.25rem;;
     
         @media screen and (max-width: 425px) {
-            font-size: 2.5rem;
+            font-size: 1.75rem;
             width: 100%;
-            line-height: 2.5rem;
+            line-height: 2rem;
         }
     
         @media screen and (min-width: 426px) and (max-width: 767px) {
-            font-size: 3rem;
+            font-size: 2rem;
             width: 100%;
-            line-height: 3rem;
+            line-height: 2.25rem;
             padding: 0 1rem;
         }
     }

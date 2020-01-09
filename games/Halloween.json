@@ -461,8 +461,10 @@
                         },
                         {
                             "message": "Back door",
-                            "level": 6,
-                            "room": 4
+                            "exit": {
+                                "level": 6,
+                                "room": 4
+                            }
                         }
                     ]
                 }
