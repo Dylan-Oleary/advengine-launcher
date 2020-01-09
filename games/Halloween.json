@@ -4,7 +4,8 @@
         "releaseDate": "January 9th, 2020",
         "tagline": "Even on your birthday, everyone's entitled to a little trick-or-treat...",
         "theme": "halloween",
-        "cover": "HalloweenCover.png"
+        "cover": "HalloweenCover.png",
+        "song": "Halloween"
     },
     "levels": [
         {

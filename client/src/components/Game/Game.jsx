@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Howl, Howler } from "howler";
 
-import { GameContextProvider, ThemeContext} from "../../contexts";
+import { GameContextProvider, ThemeContext } from "../../contexts";
 import { Error, GameOver, GameWon, Room, StartMenu } from "./Screens";
+import Halloween from "../../audio/Halloween.mp3";
 
 const Game = ({ cartridge, closeGame }) => {
     const { title, meta } = cartridge;
@@ -28,7 +30,18 @@ const Game = ({ cartridge, closeGame }) => {
     useEffect(() => {
         document.addEventListener("keydown", handleKeyPress);
 
-        return () => document.removeEventListener("keydown", handleKeyPress);
+        //**TODO: This is hard coded - find a way to make unique game tunes without importing all of them */
+        const song = new Howl({
+            src: Halloween,
+            html5: true,
+            autoplay: true,
+            loop: true
+        });
+
+        return () => {
+            document.removeEventListener("keydown", handleKeyPress);
+            song.stop();
+        };
     },[]);
 
     const renderScreen = () => {
