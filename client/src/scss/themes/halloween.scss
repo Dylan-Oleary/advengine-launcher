@@ -1,8 +1,39 @@
 .halloween {
     background: #000;
-    h1 {
-        font-family: "Serif-Gothic";
-        color: #F8F8F8;
-        text-shadow: -1px 0 #F02806, 0 1px #F02806, 1px 0 #F02806, 0 -1px #F02806;
+    font-family: "Serif-Gothic-Light";
+
+    #StartMenu {
+        .title {
+            font-family: "Serif-Gothic";
+            font-size: 4.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0 2rem;
+            text-shadow: -1px 0 #EB6123, 0 1px #EB6123, 1px 0 #EB6123, 0 -1px #EB6123;
+    
+            @media screen and (max-width: 425px){
+                font-size: 2.75rem;
+            }
+    
+            @media screen and (min-width: 426px) and (max-width: 767px) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    .title {
+        &.landing {
+            font-family: "Serif-Gothic";
+            text-shadow: -1px 0 #EB6123, 0 1px #EB6123, 1px 0 #EB6123, 0 -1px #EB6123;
+        }
+    }
+
+    .choice {
+        &:hover {
+            color: #EB6123;
+        }
+    }
+
+    .room-message, .summary {
+        color: #EB6123;
     }
 }

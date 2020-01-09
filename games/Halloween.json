@@ -1,0 +1,686 @@
+{
+    "title": "Halloween",
+    "meta": {
+        "releaseDate": "January 9th, 2020",
+        "tagline": "Even on your birthday, everyone's entitled to a little trick-or-treat...",
+        "theme": "halloween",
+        "cover": "HalloweenCover.png"
+    },
+    "levels": [
+        {
+            "level": 0,
+            "rooms": [
+                {
+                    "scenario": "January 9th, 2020, your 28th birthday. You're all alone in bed and you think you may have heard something at the front door...",
+                    "choices": [
+                        {
+                            "message": "Get up and investigate the noise",
+                            "exit": {
+                                "effect": null,
+                                "level": 1,
+                                "room": 0
+                            }
+                        },
+                        {
+                            "message": "Decide it was probably the wind. Stay in bed",
+                            "exit": {
+                                "effect": null,
+                                "level": 1,
+                                "room": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 1,
+            "rooms": [
+                {
+                    "scenario": "You look through the blinds and see that nobody is at the door. On your way back to bed, you hear glass shatter near the back door, followed next by heavy footsteps inside the house...",
+                    "choices": [
+                        {
+                            "message": "Run to your bedroom and phone for help",
+                            "exit": {
+                                "effect": null,
+                                "level": 2,
+                                "room": 0
+                            }
+                        },
+                        {
+                            "message": "Grab a baseball bat from the front closet",
+                            "exit": {
+                                "effect": null,
+                                "level": 2,
+                                "room": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "The noise stops and you fall back asleep. Hours later you hear a loud crash coming from the basement...",
+                    "choices": [
+                        {
+                            "message": "Call the police",
+                            "exit": {
+                                "effect": null,
+                                "level": 2,
+                                "room": 2
+                            }
+                        },
+                        {
+                            "message": "Investigate the noise",
+                            "exit": {
+                                "effect": null,
+                                "level": 2,
+                                "room": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "rooms": [
+                {
+                    "scenario": "You call your boyfriend and scream for help. The call cuts out. You look down and see that your phone is dead. You look down the hallway. Staring back at you is Michael Myers...",
+                    "choices": [
+                        {
+                            "message": "Open your window and jump out",
+                            "exit": {
+                                "effect": null,
+                                "level": 3,
+                                "room": 0
+                            }
+                        },
+                        {
+                            "message": "Make a break for the front door",
+                            "exit": {
+                                "effect": null,
+                                "level": 3,
+                                "room": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You grab the bat - aluminum. You quickly turn around and see who's in your house. It's Michael Myers...",
+                    "choices": [
+                        {
+                            "message": "Take a swing",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You take a swing and hit Michael, but it doesn't faze him. He easily muscles the bat away from you and beats your skull in.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Leave through the front door",
+                            "exit": {
+                                "effect": null,
+                                "level": 3,
+                                "room": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "As you pick up the phone, the power cuts out. You look down and see that you have no service either...",
+                    "choices": [
+                        {
+                            "message": "Check through the window to see if the street has power",
+                            "exit": {
+                                "effect": null,
+                                "level": 3,
+                                "room": 3
+                            }
+                        },
+                        {
+                            "message": "Take a deep breath and investigate the basement",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You know this was a bad idea. As you search in the pitch black for clues your eyes adjust to the darkness to find Michael Myers waiting for you. You're dead - why would you choose this?",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You reach the basement stairs and see a large figure walking up the stairs. You've seen this mask before. Michael Myers...",
+                    "choices": [
+                        {
+                            "message": "Grab a baseball bat from the front closet",
+                            "exit": {
+                                "effect": null,
+                                "level": 2,
+                                "room": 1
+                            }
+                        },
+                        {
+                            "message": "Run back to your bedroom and phone for help",
+                            "exit": {
+                                "effect": null,
+                                "level": 2,
+                                "room": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "rooms": [
+                {
+                    "scenario": "You survived the fall, but your ankle is in a lot of pain...",
+                    "choices": [
+                        {
+                            "message": "Head towards the forest",
+                            "exit": {
+                                "effect": null,
+                                "level": 4,
+                                "room": 0
+                            }
+                        },
+                        {
+                            "message": "Head towards the main road",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You struggle with the backyard gate that stands in between you and the road. It's jammed. You turn around. Michael plunges his knife into your throat.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You panic and struggle with the lock. You manage to get the door open, but before you can escape you are grabbed by the neck and thrown against the wall. Picture frames shatter...",
+                    "choices": [
+                        {
+                            "message": "Get up and run to the back door",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You try to run, but you stumble. Michael catches you and chokes the life out of you.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Grab a shard of glass",
+                            "exit": {
+                                "effect": null,
+                                "level": 4,
+                                "room": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You gasp and shoot out of bed. It was a dream. There is no Michael. There is no baseball bat - you don't even own one...",
+                    "choices": [
+                        {
+                            "message": "Get up and get a glass of water",
+                            "exit": {
+                                "effect": null,
+                                "level": 4,
+                                "room": 2
+                            }
+                        },
+                        {
+                            "message": "Try and get back to sleep",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "As you drift back to sleep, you hear your closet door open. You open your eyes. Michael's white mask is the last thing you see before you are suffocated with a pillow.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "The whole street has lost power. It's pitch black outside...",
+                    "choices": [
+                        {
+                            "message": "Grab a flashlight from the basement",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You search the basement blindly for a flashlight. Your hands graze something made of latex. Your eyes adjust. Michael Myers stares at you, turns his head, and plunges his knife right into your stomach.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Grab a candle from the washroom",
+                            "exit": {
+                                "effect": null,
+                                "level": 4,
+                                "room": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 4,
+            "rooms": [
+                {
+                    "scenario": "You run for what seems like miles. You look up and find a small, rundown treehouse...",
+                    "choices": [
+                        {
+                            "message": "Climb the tree and enter the treehouse",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "It's pitch black in the treehouse. You take a few steps. Suddenly, you hear a loud snap and feel a jolt of pain. It's an old bear trap. You bleed to death in darkness.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Keep running",
+                            "exit": {
+                                "effect": null,
+                                "level": 5,
+                                "room": 0
+                            }
+
+                        }
+                    ]
+                },
+                {
+                    "scenario": "As you look up from the floor, you see who is inside your house. Michael Myers. Michael approaches and tries to slash you a kitchen knife. You dodge the attack and quickly stand up...",
+                    "choices": [
+                        {
+                            "message": "Escape through the front door",
+                            "exit": {
+                                "effect": null,
+                                "level": 5,
+                                "room": 1
+                            }
+                        },
+                        {
+                            "message": "Pick up a shard of glass and stab Michael",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You've made a huge mistake. Michael blocks your attack. He violently grabs you by the back of the head and smashes your face into the shards of glass on the floor.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You can't shake this feeling that something is wrong. You have to work tomorrow and it's getting late. You know you should get back to sleep...",
+                    "choices": [
+                        {
+                            "message": "Go and watch some TV",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You fall asleep watching some movie about a guy in a hockey mask killing people in the woods. You never wake up. Your throat was slit while you slept.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Go back to sleep",
+                            "exit": {
+                                "effect": null,
+                                "level": 5,
+                                "room": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You go to the bathroom to get a candle. As you walk back down the hall - softly illuminated by your flame - you see Michael Myers standing in front of you...",
+                    "choices": [
+                        {
+                            "message": "Run back to the bathroom",
+                            "exit": {
+                                "effect": null,
+                                "level": 5,
+                                "room": 3
+                            }
+                        },
+                        {
+                            "message": "Blow out the candle",
+                            "exit": {
+                                "effect": null,
+                                "level": 5,
+                                "room": 4
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "rooms": [
+                {
+                    "scenario": "You come across the treehouse again. You've been running in circles. You hear the leaves crunch under a dusting of snow in the distance. The sound inches closer. You don't have much time...",
+                    "choices": [
+                        {
+                            "message": "Run in a different direction",
+                            "exit": {
+                                "effect": null,
+                                "level": 6,
+                                "room": 0
+                            }
+                        },
+                        {
+                            "message": "Climb the tree and enter the treehouse",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "It's pitch black in the treehouse. You take a few steps. Suddenly, you hear a loud snap and feel a jolt of pain. It's an old bear trap. You bleed to death in darkness.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You bolt out the front door. Your neighbour is home, but their lights are off. Towards the main road, you can hear police sirens rapidly approaching...",
+                    "choices": [
+                        {
+                            "message": "Bang on your neighbour's door",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "Your neighbour is slow to get to the door. As the door opens, Michael catches you and bashes your head into the door frame. You die instantly and your neighbour is slaughtered.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Run towards the sirens",
+                            "exit": {
+                                "effect": null,
+                                "level": 6,
+                                "room": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "A few hours later, the banging returns - even louder this time. You hear the back door burst open and the loud thud of heavy footsteps...",
+                    "choices": [
+                        {
+                            "message": "Run for the front door",
+                            "exit": {
+                                "effect": null,
+                                "level": 3,
+                                "room": 1
+                            }
+                        },
+                        {
+                            "message": "Jump out your window",
+                            "exit": {
+                                "effect": null,
+                                "level": 3,
+                                "room": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You trip, fall and drop the candle. It lights your carpet on fire. You run back to the bathroom and lock the door. The flames are spreading fast as Michael tries to break through the bathroom door...",
+                    "choices": [
+                        {
+                            "message": "Squeeze through the bathroom window",
+                            "exit": {
+                                "effect": null,
+                                "level": 6,
+                                "room": 2
+                            }
+                        },
+                        {
+                            "message": "Break your mirror for a weapon",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "Michael breaks through the door. You slash his neck but that doesn't stop him. He throws you down onto the tile floor and stomps your head repeatedly.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You know the layout of your house. You throw the candle at Michael's face and dodge his slash. You run...",
+                    "choices": [
+                        {
+                            "message": "Front door",
+                            "exit": {
+                                "effect": null,
+                                "level": 6,
+                                "room": 3
+                            }
+                        },
+                        {
+                            "message": "Back door",
+                            "level": 6,
+                            "room": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "rooms": [
+                {
+                    "scenario": "It starts to snow heavily and Michael is on your tail. You come out of the forest and reach a dirt road...",
+                    "choices": [
+                        {
+                            "message": "Go left",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "The snow falls faster and harder. You see headlights approach as you scream for help and run onto the road waving your arms. The driver can't see you. You are struck by the car and are killed instantly.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Go right",
+                            "exit": {
+                                "effect": null,
+                                "level": 7,
+                                "room": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You see the police and wave them down. An officer gets out and asks for your name. He says your boyfriend called and said you were in danger. His partner, having ventured towards your house while you were talking, is dead in the street - a shovel to the head. Michael is here...",
+                    "choices": [
+                        {
+                            "message": "Get in the police car",
+                            "exit": {
+                                "effect": null,
+                                "level": 7,
+                                "room": 1
+                            }
+                        },
+                        {
+                            "message": "Run away",
+                            "exit": {
+                                "effect": null,
+                                "level": 7,
+                                "room": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You're alive. You must get out of here immediately...",
+                    "choices": [
+                        {
+                            "message": "Run for the main road",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "As you turn the corner of the house, Michael cuts you off. He picks you up and smashes your head against the side of the house.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Run for the forest",
+                            "exit": {
+                                "effect": null,
+                                "level": 4,
+                                "room": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "The door is barred from the outside. You can't open it...",
+                    "choices": [
+                        {
+                            "message": "Head for the basement",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "Michael catches you before you get to the door and throws you down the stairs. Your neck is broken. It's over.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Try the back door",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You struggle with the back door. Michael wastes no time in banging your head into the door until a pool of blood soaks the floor.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "The door is jammed. It won't open...",
+                    "choices": [
+                        {
+                            "message": "Try the front door",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "The front door won't budge. You scream for help as loud as you can. There's no use. Michael decapitates you.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Try the back door",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You have trouble with the back door as you panic. You scream, but it is cut short when Michael twists your neck 180 degrees and breaks your neck.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 7,
+            "rooms": [
+                {
+                    "scenario": "It is now a full blown snow storm. You slip and fall as you run down the road. You look back and to your surprise, see a car plow right into Michael sending him flying towards you. The car loses control and flips over. Michael is knocked out beside you - his knife in reach...",
+                    "choices": [
+                        {
+                            "message": "Kill Michael",
+                            "exit": {
+                                "effect": "win",
+                                "effectDescription": "You walk over to Michael. His right arm is broken - bones poking through the skin. He isn't moving. You slit his throat and watch as the life drains from his black eyes.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Help the driver",
+                            "exit": {
+                                "effect": "win",
+                                "effectDescription": "The drive is alive. You grab her cellphone and phone for help. Police and EMS arrive to take you both to safety. When he was hit, Michael's body was launched back into the forest - it was never found...",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You watch from the car as Michael takes 6 bullets to the chest. It doesn't stop him. He approaches the officer and tosses his body through the windshield...",
+                    "choices": [
+                        {
+                            "message": "Drive away",
+                            "exit": {
+                                "effect": null,
+                                "level": 8,
+                                "room": 0
+                            }
+                        },
+                        {
+                            "message": "Get out of the car",
+                            "exit": {
+                                "effect": "win",
+                                "effectDescription": "You get out of the passenger side door. Michael reaches for you when out of nowhere, the officer, a bloody mess, puts 3 bullets into Michael's head. He calls for backup and EMS. Michael is dead.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                },
+                {
+                    "scenario": "You hear 6 shots fired. A couple of seconds later you hear the officer scream as Michael crushes his skull...",
+                    "choices": [
+                        {
+                            "message": "Keep running",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You trip as you're running. Michael catches up to you. It didn't matter how many of the right choices you made. You're dead.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Scream for help",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You final attempt at survival. All you can do is scream. There is no saviour coming, no backup. Michael stares you down. You close your eyes as you feel his blade enter your chest.",
+                                "level": null,
+                                "room": null
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "level": 8,
+            "rooms": [
+                {
+                    "scenario": "You push the pedal to the floor. The officer's body obstructs your vision. The car jumps and you hear a loud thud. You've hit Michael...",
+                    "choices": [
+                        {
+                            "message": "Reverse",
+                            "exit": {
+                                "effect": "win",
+                                "effectDescription": "You reverse at full speed. You feel another jolt, followed by a thud. You get out. Michael's head has been crushed. You survive.",
+                                "level": null,
+                                "room": null
+                            }
+                        },
+                        {
+                            "message": "Get out of the car",
+                            "exit": {
+                                "effect": "lose",
+                                "effectDescription": "You see Michael, lying motionless in the street. You go over to check on the officer and call for help. The officer tells you to watch out, but it's too late. Michael sneaks up from behind and slits your throat. Your blood sprays the officer in the face. He's next."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

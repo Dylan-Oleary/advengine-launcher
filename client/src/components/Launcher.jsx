@@ -3,6 +3,7 @@ import axios from "axios";
 
 import "../fonts/8-Bit.ttf";
 import "../fonts/Serif-Gothic.otf";
+import "../fonts/Serif-Gothic-Light.otf";
 import AdvengineLogo from "../images/advengine.png";
 
 import AudioPlayer from "./AudioPlayer";

@@ -13,6 +13,11 @@
     src: local("Serif-Gothic"), url("../fonts/Serif-Gothic.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Serif-Gothic-Light";
+    src: local("Serif-Gothic-Light"), url("../fonts/Serif-Gothic-Light.otf") format("opentype");
+}
+
 html {
     min-height: 100vh;
 }
@@ -32,8 +37,18 @@ body, #root, #Launcher, #Game, .choose-game {
 }
 
 #Error, #GameOver, #GameWon {
-    padding: 0 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 3rem;
     text-align: center;
+
+    @media screen and (max-width: 425px) {
+        padding: 0 1rem;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 767px){
+        padding: 0 2rem;
+    }
 }
 
 #Launcher {
@@ -66,7 +81,7 @@ body, #root, #Launcher, #Game, .choose-game {
         margin-top: -5.5rem;
     }
     &.landing {
-        font-size: 8.5rem;
+        font-size: 6.5rem;
 
         @media screen and (max-width: 425px) {
             font-size: 5rem;
@@ -81,8 +96,8 @@ body, #root, #Launcher, #Game, .choose-game {
 .summary {
     text-align: center;
     &.landing {
-        font-size: 4rem;
-        line-height: 3rem;
+        font-size: 3.25rem;
+        line-height: 4rem;
         margin-bottom: 3rem;;
     
         @media screen and (max-width: 425px) {
@@ -223,7 +238,7 @@ body, #root, #Launcher, #Game, .choose-game {
     }
     img {
         margin: 0 auto;
-        height: 286px;
+        height: 215px;
         width: 215px;
         border: solid 1px #2E2157;
         box-shadow: 0px 5px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
@@ -263,25 +278,25 @@ body, #root, #Launcher, #Game, .choose-game {
     margin: 0 auto;
 
     .room-message {
-        font-size: 4.25rem;
+        font-size: 2.75rem;
         text-align: center;
-        line-height: 4rem;
+        line-height: 3.25rem;
         padding: 0 2rem;
         margin-bottom: 3rem;
 
     
         @media screen and (max-width: 425px) {
-            font-size: 2.5rem;
+            font-size: 1.75rem;
             margin-bottom: 2rem;
-            line-height: 2.5rem;
+            line-height: 2rem;
             padding: 0;
         }
 
         @media screen and (min-width: 426px) and (max-width: 767px){
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
             padding: 0 1rem;
-            line-height: 3rem;
+            line-height: 2.25rem;
         }
     }
 
@@ -294,23 +309,23 @@ body, #root, #Launcher, #Game, .choose-game {
             width: 100%;
             text-align: center;
             margin: 1rem 0;
-            font-size: 3rem;
-            line-height: 3rem;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
         }
 
         @media screen and (max-width: 425px) {
             .choice {
-                font-size: 2.5rem;
+                font-size: 1.25rem;
                 width: 100%;
-                line-height: 2.5rem;
+                line-height: 1.5rem;
             }
         }
 
         @media screen and (min-width: 426px) and (max-width: 767px) {
             .choice {
-                font-size: 2.5rem;
+                font-size: 1.5rem;
                 width: 100%;
-                line-height: 2.5rem;
+                line-height: 1.75rem;
                 padding: 0 1rem;
             }
         }
