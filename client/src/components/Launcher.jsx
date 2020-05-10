@@ -56,7 +56,6 @@ const Launcher = () => {
                         </div>
                         <div className="footer">
                             <p>&copy; 2020 WALKAWAY WILD INC.</p>
-                            <p>HAPPY BIRTHDAY MOTHER F#@KER!</p>
                         </div>
                     </div>
                 )
